@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>CategoryList</servlet-name>
+    <servlet-class>com.sda.hotnews.category.CategoryListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryList</servlet-name>
+    <url-pattern>/categories.html</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>CategoryAddFormServlet</servlet-name>
+    <servlet-class>com.sda.hotnews.category.CategoryAddFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryAddFormServlet</servlet-name>
+    <url-pattern>/new_categories.html</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+  <servlet-name>CategoryAddServlet</servlet-name>
+  <servlet-class>com.sda.hotnews.category.CategoryAddServlet</servlet-class>
+</servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryAddServlet</servlet-name>
+    <url-pattern>/add_categories.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CategoryEditServlet</servlet-name>
+    <servlet-class>com.sda.hotnews.category.CategoryEditFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryEditServlet</servlet-name>
+    <url-pattern>/edit_categories.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CategoryDeleteFormServlet</servlet-name>
+    <servlet-class>com.sda.hotnews.category.CategoryDeleteFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryDeleteFormServlet</servlet-name>
+    <url-pattern>/delete_categories.html</url-pattern>
+  </servlet-mapping>
+
+
+  <filter>
+    <filter-name>CategoryFilter</filter-name>
+    <filter-class>com.sda.hotnews.category.CategoryFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CategoryFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>false</el-ignored>
+    </jsp-property-group>
+  </jsp-config>
+</web-app>

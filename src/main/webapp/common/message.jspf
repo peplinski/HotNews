@@ -1,0 +1,7 @@
+<c:if test="${_OK !=null}">
+    <b style="color: green">${_OK}</b>
+</c:if>
+<%--dodanie wiadomosci o nie udanym dodaniu--%>
+<c:if test="${_ERROR !=null}">
+    <b style="color: red">${_ERROR}</b>
+</c:if>
